@@ -16,10 +16,18 @@ module.exports = {
     },
     colors: {
       "white": '#ffffff',
-      "purple": '#0099b4',
+      "purple": '#3a3170',
       "orange": '#f27438',
       "blue": '#0099b4',
-    }
+    },
+    screens: {
+      'xs': "320px",
+      'sm': "640px",
+      'md': "768px",
+      'lg': "1024px",
+      'xl': "1280px",
+      "2xl": "1536px",
+    },
   },
   plugins: [],
 };
