@@ -9,14 +9,14 @@ export default function Cta({children, href, className, is_phantom = false, is_r
     ${is_phantom
       ?
       `
-        bg-white
-        boder-white
+        bg-transparent
+        boder-transparent
         hover:bg-purple
         hover:text-white
       `
       :
       `
-        bg-orange hover:bg-white
+        bg-orange hover:bg-transparent
         text-white
         hover:text-orange
         border-2
