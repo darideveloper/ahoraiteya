@@ -1,8 +1,8 @@
 import Cta from "@/components/cta"
-import { fontTitle } from "@/libs/fornts"
+import Arrow from "@/components/arrow"
+import { fontTitle } from "@/libs/fonts"
 
-
-export default function Hero (){
+export default function Hero() {
   
   const counters = [
     {
@@ -41,8 +41,6 @@ export default function Hero (){
         flex-col md:flex-row
         relative
         py-8 sm:py-16 md:py-24 lg:py-36 xl:py-56
-        
-        mb-56
       `}
     >
 
@@ -106,23 +104,14 @@ export default function Hero (){
                       >
                         {link.text}
                       </span>
-                      <svg 
-                        strokeLinejoin="round" 
-                        strokeMiterlimit="2"
-                        viewBox="0 0 24 24"
+                      <Arrow 
                         className={`
-                          w-5
-                          h-5
                           ${link.is_phantom ? 'fill-orange' : 'fill-white'}
                           ${link.is_phantom ? 'group-hover:fill-white' : 'group-hover:fill-orange'}
-                          -rotate-45
+                          w-5
+                          h-5
                         `}
-                      >
-                          <path 
-                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                            fillRule="nonzero"  
-                          />  
-                        </svg>
+                      />
                     </div>
                   </Cta>
                 )
@@ -152,7 +141,7 @@ export default function Hero (){
                       justify-center
                       w-24 lg:w-auto
                     `}
-                    index={index}
+                    key={index}
                   >
                     <span
                       className={`

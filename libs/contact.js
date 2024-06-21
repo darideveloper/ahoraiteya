@@ -1,0 +1,1 @@
+export const whatsappLinkBase = 'https://api.whatsapp.com/send?phone=595981622262&text='

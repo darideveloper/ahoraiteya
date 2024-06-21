@@ -1,17 +1,19 @@
-import { fontRegular } from "@/libs/fornts"
 import Hero from "@/sections/hero"
+import Services from "@/sections/services"
+import { fontRegular } from "@/libs/fonts"
 
-export default function Home() {
+export default function Index() {
   return (
     <main
       className={`
-        ${fontRegular.className}
         w-full
         overflow-x-hidden
+        ${fontRegular.className}
       `}
     >
+
       <Hero />
-   
+      <Services />
     </main>
-  );
+  )
 }

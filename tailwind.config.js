@@ -18,7 +18,10 @@ module.exports = {
       "white": '#ffffff',
       "purple": '#3a3170',
       "orange": '#f27438',
+      "orange-light": '#f7b9a2',
       "blue": '#0099b4',
+      "grey": '#e6e6e6',
+      "transparent": "transparent",
     },
     screens: {
       'xs': "320px",
