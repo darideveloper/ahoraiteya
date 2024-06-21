@@ -192,9 +192,10 @@ export default function Hero() {
           right-0
           -z-10
           h-full
+          w-auto
+          object-cover
           opacity-20 lg:opacity-100
           blur-sm md:blur-none
-          hidden sm:block
         `}
       />
 
