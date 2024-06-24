@@ -93,7 +93,7 @@ export default function OurApp() {
           className={`
             app-images
             w-80 md:w-1/3
-            max-w-sm
+            max-w-64
             mx-auto md:mx-0
             mt-4
             relative

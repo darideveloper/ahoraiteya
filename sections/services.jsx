@@ -34,7 +34,6 @@ export default function Services() {
         container
         mx-auto
         text-center md:text-left
-        my-20
       `}
     >
 
