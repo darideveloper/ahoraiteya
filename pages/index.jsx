@@ -1,6 +1,7 @@
+import { fontRegular } from "@/libs/fonts"
 import Hero from "@/sections/hero"
 import Services from "@/sections/services"
-import { fontRegular } from "@/libs/fonts"
+import OurApp from "@/sections/our-app"
 
 export default function Index() {
   return (
@@ -12,8 +13,9 @@ export default function Index() {
       `}
     >
 
-      <Hero />
-      <Services />
+      {/* <Hero /> */}
+      {/* <Services /> */}
+      <OurApp />
     </main>
   )
 }

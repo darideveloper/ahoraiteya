@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Title from '@/components/title'
 import Arrow from '@/components/arrow'
+import Icon from '@/components/icon'
 import { whatsappLinkBase } from '@/libs/contact'
 
 export default function Services() {
@@ -100,26 +101,14 @@ export default function Services() {
           >
             <article>
 
-              <div 
+              <Icon 
+                src={`/images/icon-${service.title.toLowerCase()}.svg`}
+                alt={`Icono de servicio ${service.title}`}
                 className={`
-                  img-wrapper
-                  bg-orange-light group-hover:bg-orange
-                  inline-block
-                  rounded-xl
-                  duration-300
                   mb-4
                 `}
-              >
-                <img 
-                  src={`/images/icon-${service.title.toLowerCase()}.svg`}
-                  alt={`Icono de servicio ${service.title}`}
-                  className={`
-                    mx-auto
-                    w-20
-                    p-4
-                  `}
-                />
-              </div>
+              />
+              
               <h3
                 className={`
                   text-2xl
