@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 
-export default function Cta({children, href, className, is_phantom = false, is_rounded = false}){
+export default function Cta({children, href, className, is_phantom = false, target = '_self'}){
   
   const classes = `
     group
@@ -35,6 +35,7 @@ export default function Cta({children, href, className, is_phantom = false, is_r
     <Link
       href={href}
       className={classes}
+      target={target}
     >
       {children}
     </Link>
@@ -45,5 +46,5 @@ Cta.propTypes = {
   href: PropTypes.string.isRequired,
   className: PropTypes.string,
   is_phantom: PropTypes.bool,
-  is_rounded: PropTypes.bool
+  target: PropTypes.string
 }
