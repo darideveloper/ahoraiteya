@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import { useState, useEffect } from 'react'
 import Icon from '@/components/icon'
+import { fontTitle } from '@/libs/fonts'
 
 
 export default function DetailCard({title, description, onClick, step, currentStep}) {
@@ -51,6 +51,7 @@ export default function DetailCard({title, description, onClick, step, currentSt
             text-xl
             ${isOpen ? 'top-10' : 'top-1/2'}
             ${isOpen && 'text-white'}
+            ${fontTitle.className}
           `}
         >
           {title}

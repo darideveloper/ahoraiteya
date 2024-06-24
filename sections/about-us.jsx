@@ -1,5 +1,6 @@
 import Title from '@/components/title'
 import Cta from '@/components/cta'
+import { fontTitle } from '@/libs/fonts'
 
 export default function AboutUs () {
 
@@ -123,6 +124,7 @@ export default function AboutUs () {
                 <h3
                   className={`
                     text-xl
+                    ${fontTitle.className}
                   `}
                 >
                   {item.title}

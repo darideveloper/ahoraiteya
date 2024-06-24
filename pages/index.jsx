@@ -14,9 +14,9 @@ export default function Index() {
       `}
     >
 
-      {/* <Hero /> */}
-      {/* <Services /> */}
-      {/* <OurApp /> */}
+      <Hero />
+      <Services />
+      <OurApp />
       <AboutUs />
     </main>
   )

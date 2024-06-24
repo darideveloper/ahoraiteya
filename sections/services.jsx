@@ -3,6 +3,7 @@ import Title from '@/components/title'
 import Arrow from '@/components/arrow'
 import Icon from '@/components/icon'
 import { whatsappLinkBase } from '@/libs/contact'
+import { fontTitle } from '@/libs/fonts'
 
 export default function Services() {
   
@@ -114,6 +115,7 @@ export default function Services() {
                   text-2xl
                   font-bold
                   my-4
+                  ${fontTitle.className}
                 `}
               >
                 {service.title}

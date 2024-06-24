@@ -35,7 +35,6 @@ export default function OurApp() {
         our-app
         container
         mx-auto
-        mb-24
       `}
     >
       <Title 
