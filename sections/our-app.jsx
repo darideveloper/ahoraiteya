@@ -119,15 +119,7 @@ export default function OurApp() {
           }
 
         </div>
-
-
       </div>
-
-
-
     </section>
-
-
-
   )
 }
