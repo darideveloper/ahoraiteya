@@ -16,11 +16,11 @@ export default function Index() {
       `}
     >
 
-      {/* <Hero /> */}
-      {/* <Services /> */}
-      {/* <OurApp /> */}
-      {/* <AboutUs /> */}
-      {/* <DownloadApp /> */}
+      <Hero />
+      <Services />
+      <OurApp />
+      <DownloadApp />
+      <AboutUs />
       <JoinUs />
     </main>
   )

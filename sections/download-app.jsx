@@ -10,6 +10,8 @@ export default function DownloadApp() {
         text-white
         text-center
         py-6
+        mt-20
+        mb-10
       `}
     >
       <div 
