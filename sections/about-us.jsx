@@ -1,6 +1,6 @@
 import Title from '@/components/title'
 import Cta from '@/components/cta'
-import { fontTitle } from '@/libs/fonts'
+import InfoCard from '@/components/info-card'
 
 export default function AboutUs () {
 
@@ -108,35 +108,11 @@ export default function AboutUs () {
 
           {
             infoData.map((item, index) => (
-              <div 
+              <InfoCard 
                 key={index}
-                className={`
-                  info-card
-                  shadow-lg
-                  px-8 py-6
-                  rounded-lg
-                  duration-300
-                  hover:shadow-xl
-                  hover:bg-orange
-                  hover:text-white
-                `}
-              >
-                <h3
-                  className={`
-                    text-xl
-                    ${fontTitle.className}
-                  `}
-                >
-                  {item.title}
-                </h3>
-                <p
-                  className={`
-                    
-                  `}
-                >
-                  {item.description}
-                </p>
-              </div>
+                title={item.title}
+                description={item.description}
+              />
             ))
           }
         </div>

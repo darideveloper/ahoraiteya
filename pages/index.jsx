@@ -5,8 +5,9 @@ import OurApp from "@/sections/our-app"
 import AboutUs from "@/sections/about-us"
 import DownloadApp from "@/sections/download-app"
 import JoinUs from "@/sections/join-us"
+import Contact from "@/sections/contact"
 
-export default function Index() {
+export default function Home() {
   return (
     <main
       className={`
@@ -22,6 +23,7 @@ export default function Index() {
       <DownloadApp />
       <AboutUs />
       <JoinUs />
+      <Contact />
     </main>
   )
 }

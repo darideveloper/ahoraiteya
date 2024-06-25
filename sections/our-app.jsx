@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Title from '@/components/title'
 import DetailCard from '@/components/detail-card'
+import AppImage from '@/components/app-image'
 
 export default function OurApp() {
 
@@ -101,18 +102,12 @@ export default function OurApp() {
         >
 
           {
-            imagesPaths.map((path, index) => (
-              <img 
+            imagesPaths.map((src, index) => (
+              <AppImage 
                 key={index}
-                src={path}
-                alt={`app step ${index + 1}`}
-                className={`
-                  ${currentStep === index ? 'opacity-100' : 'opacity-0'}
-                  ${index != 0 && 'absolute'}
-                  top-0
-                  left-0
-                  w-full
-                `}
+                src={src}
+                step={index}
+                currentStep={currentStep}
               />
             )) 
           }

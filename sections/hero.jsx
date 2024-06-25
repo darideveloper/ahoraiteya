@@ -1,6 +1,6 @@
-import Cta from "@/components/cta"
-import Arrow from "@/components/arrow"
-import { fontTitle } from "@/libs/fonts"
+import CtaIcon from "@/components/cta-icon"
+import Counter from "@/components/counter"
+import { fontTitle } from '@/libs/fonts'
 
 export default function Hero() {
   
@@ -84,36 +84,12 @@ export default function Hero() {
             {
               links.map((link, index) => {
                 return (
-                  <Cta
+                  <CtaIcon 
                     key={index}
                     href={link.href}
                     is_phantom={link.is_phantom}
-                  >
-                    <div 
-                      className={`
-                        content
-                        flex  
-                        items-center
-                        justify-center
-                      `}
-                    >
-                      <span
-                        className={`
-                          mr-2
-                        `}
-                      >
-                        {link.text}
-                      </span>
-                      <Arrow 
-                        className={`
-                          ${link.is_phantom ? 'fill-orange' : 'fill-white'}
-                          ${link.is_phantom ? 'group-hover:fill-white' : 'group-hover:fill-orange'}
-                          w-5
-                          h-5
-                        `}
-                      />
-                    </div>
-                  </Cta>
+                    text={link.text}
+                  />
                 )
               })
             }
@@ -132,45 +108,11 @@ export default function Hero() {
             {
               counters.map((counter, index) => {
                 return (
-                  <p
-                    className={`
-                      counter
-                      flex
-                      flex-col
-                      items-center lg:items-start
-                      justify-center
-                      w-24 lg:w-auto
-                    `}
+                  <Counter 
                     key={index}
-                  >
-                    <span
-                      className={`
-                        amount
-                        ${fontTitle.className}
-                        text-3xl md:text-4xl
-                        font-bold
-                      `}
-                    >
-                      {counter.amount}
-                      <span
-                        className={`
-                          postfix
-                          opacity-60
-                        `}
-                      >
-                        K+
-                      </span>
-                    </span>
-
-                    <span
-                      className={`
-                        description
-                        leading-4
-                      `}
-                    >
-                      {counter.description}
-                    </span>
-                  </p>
+                    amount={counter.amount}
+                    description={counter.description}
+                  />
                 )
               })
             }
