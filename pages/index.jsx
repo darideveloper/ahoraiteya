@@ -17,12 +17,12 @@ export default function Home() {
       `}
     >
 
-      <Hero />
+      {/* <Hero />
       <Services />
       <OurApp />
       <DownloadApp />
       <AboutUs />
-      <JoinUs />
+      <JoinUs /> */}
       <Contact />
     </main>
   )
