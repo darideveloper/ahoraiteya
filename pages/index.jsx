@@ -4,6 +4,7 @@ import Services from "@/sections/services"
 import OurApp from "@/sections/our-app"
 import AboutUs from "@/sections/about-us"
 import DownloadApp from "@/sections/download-app"
+import JoinUs from "@/sections/join-us"
 
 export default function Index() {
   return (
@@ -19,7 +20,8 @@ export default function Index() {
       {/* <Services /> */}
       {/* <OurApp /> */}
       {/* <AboutUs /> */}
-      <DownloadApp />
+      {/* <DownloadApp /> */}
+      <JoinUs />
     </main>
   )
 }
