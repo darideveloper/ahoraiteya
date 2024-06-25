@@ -17,7 +17,7 @@ export default function AppImage({src, step, currentStep}) {
 }
 
 AppImage.propTypes = {
-  src: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
-  currentStep: PropTypes.number.isRequired
+  src: PropTypes.string,
+  step: PropTypes.number,
+  currentStep: PropTypes.number,
 }

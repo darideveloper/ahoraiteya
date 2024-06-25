@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { fontTitle } from '@/libs/fonts'
 
-export default function Counter({amount, description}) {
+export default function Counter({amount, description, delay = 0}) {
   return (
     <p
       className={`
@@ -12,6 +12,8 @@ export default function Counter({amount, description}) {
         justify-center
         w-24 lg:w-auto
       `}
+      data-aos="zoom-in-up"
+      data-aos-delay={delay}
     >
       <span
         className={`
@@ -46,5 +48,6 @@ export default function Counter({amount, description}) {
 
 Counter.propTypes = {
   amount: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
+  delay: PropTypes.number
 }

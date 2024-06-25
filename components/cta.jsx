@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 
-export default function Cta({children, href, className, is_phantom = false, target = '_self'}){
+export default function Cta({children, href, className, is_phantom = false, target = '_self', delay = 0}){
   
   const classes = `
     group
@@ -32,13 +32,23 @@ export default function Cta({children, href, className, is_phantom = false, targ
   `
 
   return (
-    <Link
-      href={href}
-      className={classes}
-      target={target}
+    <div 
+      className={`
+        cta-wrapper
+        flex
+        justify-center
+      `}
+      data-aos="fade-down"
+      data-aos-delay={delay}
     >
-      {children}
-    </Link>
+      <Link
+        href={href}
+        className={classes}
+        target={target}
+      >
+        {children}
+      </Link>
+    </div>
   )
 }
 
@@ -46,5 +56,6 @@ Cta.propTypes = {
   href: PropTypes.string.isRequired,
   className: PropTypes.string,
   is_phantom: PropTypes.bool,
-  target: PropTypes.string
+  target: PropTypes.string,
+  delay: PropTypes.number,
 }

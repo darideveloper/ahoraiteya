@@ -63,11 +63,16 @@ export default function Hero() {
               text-5xl md:text-6xl
               my-8
             `}
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
             La mejor <strong>solución</strong> a tus entregas
           </h1>
 
-          <p>
+          <p
+            data-aos="fade-down"
+            data-aos-delay="600"
+          >
             Realice sus envios de una forma rápida con unos simples pasos
           </p>
 
@@ -89,6 +94,7 @@ export default function Hero() {
                     href={link.href}
                     is_phantom={link.is_phantom}
                     text={link.text}
+                    delay={index * 300 + 1000}
                   />
                 )
               })
@@ -112,6 +118,7 @@ export default function Hero() {
                     key={index}
                     amount={counter.amount}
                     description={counter.description}
+                    delay={index * 300 + 1800}
                   />
                 )
               })
