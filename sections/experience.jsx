@@ -15,7 +15,7 @@ export default function Experience () {
     "frontliner",
     "bazar", 
     "forever",
-    "mannula",
+    "mannela",
   ]
 
   return (
@@ -79,7 +79,7 @@ export default function Experience () {
               `}
             >
               <img 
-                src={`/images/experience/${image}.png`}
+                src={`/images/experience/${image}.webp`}
                 alt={`logo de ${image}`}
                 className={`
                   w-full
