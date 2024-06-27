@@ -75,8 +75,8 @@ export default function Benefits() {
         className={`
           cards
           grid
-          grid-cols-1 sm:grid-cols-2 xl:grid-cols-4
-          gap-8
+          grid-cols-1 sm:grid-cols-2 xl:grid-cols-3
+          gap-8 md:gap-12
           w-11/12 sm:w-full
           mx-auto
           mt-8
