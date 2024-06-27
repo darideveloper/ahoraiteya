@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types'
 import Icon from '@/components/icon'
 import { fontTitle } from '@/libs/fonts'
 
-export default function ServiceCard({title, description}) {
+export default function BenefitCard({title, description}) {
   return (
     <article
       className={`
@@ -47,4 +48,10 @@ export default function ServiceCard({title, description}) {
       </p>
     </article>
   )
+}
+
+
+BenefitCard.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string
 }

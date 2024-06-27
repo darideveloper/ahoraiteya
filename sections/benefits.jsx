@@ -1,9 +1,9 @@
 import Title from '@/components/title'
-import ServiceCard from '@/components/service-card'
+import BenefitCard from '@/components/benefit-card'
 
-export default function Services() {
+export default function Benefits() {
   
-  const servicesData = [
+  const benefitsData = [
     {
       "title": "INTEGRACIÓN TECNOLÓGICA AVANZADA",
       "description": "Optimización de rutas en tiempo real usando IA y machine learning.",
@@ -51,8 +51,8 @@ export default function Services() {
         `}
       >
         <Title
-          title="Que ofrecemos"
-          subtitle="Nuestros servicios"
+          title="Qué ofrecemos"
+          subtitle="Beneficios clave para el sector empresarial"
           className={`
             w-full md:w-1/2 lg:w-1/3
           `}
@@ -82,8 +82,8 @@ export default function Services() {
           mt-8
         `}
       >
-        {servicesData.map((service, index) => (
-          <ServiceCard 
+        {benefitsData.map((service, index) => (
+          <BenefitCard 
             key={index}
             title={service.title}
             description={service.description}

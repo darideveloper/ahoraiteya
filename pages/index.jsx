@@ -1,6 +1,6 @@
 import { fontRegular } from "@/libs/fonts"
 import Hero from "@/sections/hero"
-import Services from "@/sections/services"
+import Benefits from "@/sections/benefits"
 import OurApp from "@/sections/our-app"
 import AboutUs from "@/sections/about-us"
 import DownloadApp from "@/sections/download-app"
@@ -18,7 +18,7 @@ export default function Home() {
     >
 
       <Hero />
-      <Services />
+      <Benefits />
       <OurApp />
       <DownloadApp />
       <AboutUs />
