@@ -5,20 +5,28 @@ export default function Services() {
   
   const servicesData = [
     {
-      "title": "Express",
-      "description": "Transportamos documentación y paquetería de todo tipo, que no exceda las dimensiones 45x45x45 cms y 25kg de peso.",
+      "title": "INTEGRACIÓN TECNOLÓGICA AVANZADA",
+      "description": "Optimización de rutas en tiempo real usando IA y machine learning.",
     },
     {
-      "title": "Gestiones",
-      "description": "Servicio complementario al “Express” que ofrece gestionar trámites bancarios, notariales, institucionales, retiro de cheques u otras acciones similares.",
+      "title": "GESTIÓN LOGÍSTICA PERSONALIZADA",
+      "description": "Soluciones completamente personalizadas para cada necesidad empresarial.",
     },
     {
-      "title": "Junior",
-      "description": "Servicio de mensajería para la entrega de productos, compras, retiro de encomiendas, entre otros.",
+      "title": "COMPROMISO CON LA SOSTENIBILIDAD",
+      "description": "Prácticas ecológicas y vehículos sostenibles en nuestra flota.",
     },
     {
-      "title": "Delivery",
-      "description": "Consiste en el retiro, transporte y distribución de documentos y encomiendas en tiempo planificado y con confirmación de entrega." 
+      "title": "SEGURIDAD Y CONFIANZA",
+      "description": "Procesos de cifrado avanzados y monitoreo en tiempo real para cada entrega." 
+    },
+    {
+      "title": "FLEXIBILIDAD OPERATIVA",
+      "description": "Capacidad para manejar solicitudes de último momento y cambios en tiempo real." 
+    },
+    {
+      "title": "EXPERIENCIA Y FIABILIDAD",
+      "description": "Más de 1 millón de envíos realizados, garantizando un servicio de alta calidad y confiable." 
     }
 
   ]
