@@ -1,35 +1,41 @@
 import CtaIcon from "@/components/cta-icon"
 import Counter from "@/components/counter"
 import { fontTitle } from '@/libs/fonts'
+import { whatsappLinkBase } from "@/libs/contact"
 
 export default function Hero() {
   
   const counters = [
     {
       "amount": "12",
+      "unit": "K",
       "description": "Usuarios Registrados"
     },
     {
       "amount": "9",
+      "unit": "K",
       "description": "Personas Satisfechas"
     },
     {
-      "amount": "200",
+      "amount": "1",
+      "unit": "M",
       "description": "Envios Realizados"
     },
   ]
   
   const links = [
     {
-      "text": "Contáctanos",
-      "href": "#contact",
-      "is_phantom": false
+      "text": "Whatsapp",
+      "href": `${whatsappLinkBase}Hola, me gustaría saber más sobre sus servicios`,
+      "is_phantom": false,
+      "target": "_blank"
     },
     {
-      "text": "Portal de empresas",
-      "href": "https://ahoraiteya.com/business/",
-      "is_phantom": true
-    }
+      "text": "Contáctanos",
+      "href": "#contact",
+      "is_phantom": true,
+      "target": "_self"
+    },
   ]
 
   return (
@@ -62,18 +68,27 @@ export default function Hero() {
               ${fontTitle.className}
               text-5xl md:text-6xl
               my-8
+              font-bold
             `}
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            La mejor <strong>solución</strong> a tus entregas
+            ACERCA DE
+            <span
+              className={`
+                text-orange
+                block
+              `}
+            >
+              AHORAITEYA
+            </span>
           </h1>
 
           <p
             data-aos="fade-down"
             data-aos-delay="600"
           >
-            Realice sus envios de una forma rápida con unos simples pasos
+            Con más de 1 millón de envíos realizados, "AhoraiteYA" utiliza tecnología avanzada para proporcionar soluciones logísticas precisas y adaptadas a las necesidades del mercado empresarial. Nuestra plataforma propia simplifica la gestión de logística, haciendo cada operación más eficiente y menos susceptible a errores.
           </p>
 
           <div 
@@ -94,6 +109,7 @@ export default function Hero() {
                     href={link.href}
                     is_phantom={link.is_phantom}
                     text={link.text}
+                    target={link.target}
                     delay={index * 300 + 1000}
                   />
                 )
@@ -118,6 +134,7 @@ export default function Hero() {
                     key={index}
                     amount={counter.amount}
                     description={counter.description}
+                    unit={counter.unit}
                     delay={index * 300 + 1800}
                   />
                 )

@@ -2,12 +2,13 @@ import PropTypes from 'prop-types'
 import Cta from "@/components/cta"
 import Arrow from "@/components/arrow"
 
-export default function CtaIcon({href, is_phantom, text, delay = 0}) {
+export default function CtaIcon({href, is_phantom, text, target='_self', delay = 0}) {
   return (
     <Cta
         href={href}
         is_phantom={is_phantom}
         delay={delay}
+        target={target}
       >
         <div 
           className={`
@@ -41,5 +42,6 @@ CtaIcon.propTypes = {
   href: PropTypes.string,
   is_phantom: PropTypes.bool,
   text: PropTypes.string,
+  target: PropTypes.string,
   delay: PropTypes.number
 }
