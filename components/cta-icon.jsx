@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types'
 import Cta from "@/components/cta"
-import Arrow from "@/components/arrow"
 
-export default function CtaIcon({href, is_phantom, text, target='_self', delay = 0}) {
+export default function CtaIcon({href, is_phantom, text, icon, target='_self', delay = 0}) {
   return (
     <Cta
         href={href}
@@ -25,14 +24,7 @@ export default function CtaIcon({href, is_phantom, text, target='_self', delay =
           >
             {text}
           </span>
-          <Arrow 
-            className={`
-              ${is_phantom ? 'fill-orange' : 'fill-white'}
-              ${is_phantom ? 'group-hover:fill-white' : 'group-hover:fill-orange'}
-              w-5
-              h-5
-            `}
-          />
+          {icon}
         </div>
       </Cta>
   )
@@ -42,6 +34,7 @@ CtaIcon.propTypes = {
   href: PropTypes.string,
   is_phantom: PropTypes.bool,
   text: PropTypes.string,
+  icon: PropTypes.node,
   target: PropTypes.string,
   delay: PropTypes.number
 }

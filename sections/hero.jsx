@@ -2,6 +2,8 @@ import CtaIcon from "@/components/cta-icon"
 import Counter from "@/components/counter"
 import { fontTitle } from '@/libs/fonts'
 import { whatsappLinkBase } from "@/libs/contact"
+import IconArrow from '@/components/icon-arrow'
+import IconWhatsapp from '@/components/icon-whatsapp'
 
 export default function Hero() {
   
@@ -28,13 +30,15 @@ export default function Hero() {
       "text": "Whatsapp",
       "href": `${whatsappLinkBase}Hola, me gustaría saber más sobre sus servicios`,
       "is_phantom": false,
-      "target": "_blank"
+      "target": "_blank",
+      "icon": <IconWhatsapp className={`w-5 h-5 fill-white mx-2 group-hover:fill-orange`}/>
     },
     {
       "text": "Contáctanos",
       "href": "#contact",
       "is_phantom": true,
-      "target": "_self"
+      "target": "_self",
+      "icon": <IconArrow className={`w-5 h-5 fill-black mx-2 group-hover:fill-white`} />
     },
   ]
 
@@ -109,6 +113,7 @@ export default function Hero() {
                     href={link.href}
                     is_phantom={link.is_phantom}
                     text={link.text}
+                    icon={link.icon}
                     target={link.target}
                     delay={index * 300 + 1000}
                   />

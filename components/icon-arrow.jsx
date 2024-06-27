@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-export default function Arrow({className}) {
+export default function IconArrow({className}) {
   return (
     <svg 
       strokeLinejoin="round" 
@@ -19,6 +19,6 @@ export default function Arrow({className}) {
   )
 }
 
-Arrow.propTypes = {
+IconArrow.propTypes = {
   className: PropTypes.string
 }
