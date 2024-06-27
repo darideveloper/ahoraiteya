@@ -1,7 +1,8 @@
 import { fontRegular } from "@/libs/fonts"
 import Hero from "@/sections/hero"
 import Benefits from "@/sections/benefits"
-import OurApp from "@/sections/our-app"
+import Experience from "@/sections/experience"
+import OurEssence from "@/sections/our-essence"
 import AboutUs from "@/sections/about-us"
 import DownloadApp from "@/sections/download-app"
 import JoinUs from "@/sections/join-us"
@@ -19,7 +20,8 @@ export default function Home() {
 
       <Hero />
       <Benefits />
-      <OurApp />
+      <Experience />
+      <OurEssence />
       <DownloadApp />
       <AboutUs />
       <JoinUs />

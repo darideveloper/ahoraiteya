@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types'
-import Icon from '@/components/icon'
 import { fontTitle } from '@/libs/fonts'
 
 
-export default function DetailCard({title, description, onClick, step, currentStep}) {
+export default function DetailCard({title, description, onClick, index, currentEssence}) {
 
-  const isOpen = currentStep === step
+  const isOpen = currentEssence === index
 
   return (
     <article 
@@ -13,7 +12,7 @@ export default function DetailCard({title, description, onClick, step, currentSt
         details-card 
         flex
         items-center
-        justify-start
+        justify-between
         shadow-lg
         rounded-xl
         group
@@ -30,39 +29,32 @@ export default function DetailCard({title, description, onClick, step, currentSt
       `}
       onClick={onClick}
     >
-      <Icon 
-        src="/images/icon-delivery.svg"
-        alt="Icono de delivery"
-        small={true}
-        className={`
-          ${isOpen && '!bg-orange'}
-        `}
-      />
       <div 
         className={`
           texts
           text-left
           ml-4
+          w-10/12
         `}
       >
         <h3
           className={`
             font-bold
             text-xl
-            ${isOpen ? 'top-10' : 'top-1/2'}
-            ${isOpen && 'text-white'}
+            duration-300
+            w-full
             ${fontTitle.className}
+            ${isOpen && 'text-white'}
+            ${isOpen && 'ml-4'}
           `}
         >
           {title}
         </h3>
 
         <p
+          // text hidden, only visible for seo
           className={`
-            duration-300
-            ${isOpen ? 'h-6' : 'h-0'}
-            ${isOpen ? 'opacity-100' : 'opacity-0'}
-            ${isOpen && 'text-white'}
+            hidden
           `}
         >
           {description}
@@ -76,15 +68,13 @@ export default function DetailCard({title, description, onClick, step, currentSt
         viewBox="0 0 24 24"
         className={`
           arrow
-          w-4
+          w-10
+          p-1
           duration-300
           fill-orange-light
           ${!isOpen && 'group-hover:fill-orange'}
           ${isOpen && 'opacity-0'}
-          absolute
-          right-4
-          top-1/2
-          -translate-y-1/2
+          -rotate-90
         `}
       >
         <path 
@@ -98,8 +88,8 @@ export default function DetailCard({title, description, onClick, step, currentSt
 
 DetailCard.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   onClick: PropTypes.func,
-  step: PropTypes.number,
-  currentStep: PropTypes.number
+  index: PropTypes.number,
+  currentEssence: PropTypes.number,
 }
