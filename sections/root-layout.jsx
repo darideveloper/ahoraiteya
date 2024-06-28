@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import Footer from "@/sections/footer"
+import CtaWhatsapp from "@/sections/cta-whatsapp"
 import { fontRegular } from "@/libs/fonts"
 
 export default function RootLayout ({children}) {
@@ -15,6 +16,7 @@ export default function RootLayout ({children}) {
       >
         {children}
       </main>
+      <CtaWhatsapp />
       <Footer />
     </>
   )
