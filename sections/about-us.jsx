@@ -2,24 +2,20 @@ import Title from '@/components/title'
 import Cta from '@/components/cta'
 import InfoCard from '@/components/info-card'
 
-export default function AboutUs () {
+export default function AboutUs() {
 
   const infoData = [
     {
-      "title": "Hecho en Paraguay",
-      "description": "Somos una empresa 100% paraguaya, comprometida con el desarrollo del país."
+      "title": "Capacidades Tecnológicas",
+      "description": "Nuestro enfoque en la innovación tecnológica nos ha permitido desarrollar una plataforma completa que maneja todos los aspectos del proceso de delivery, desde la gestión de pedidos hasta la entrega final. Esta plataforma no solo facilita una operación sin errores y eficiente, sino que también ofrece capacidades avanzadas de reporte y análisis para adaptarse a las necesidades específicas de cada cliente."
     },
     {
-      "title": "Factura Legal",
-      "description": "Todos nuestros servicios cuentan con factura legal."
+      "title": "Soporte Excepcional B2B",
+      "description": 'En "AhoraiteYA", entendemos la importancia del soporte continuo para las operaciones empresariales. Ofrecemos un nivel de soporte inmediato a través de una designación exclusiva de nuestros operadores para el propósito a través múltiples canales, correo electrónico, WhatsApp y llamadas telefónicas, asegurando que todas sus consultas y necesidades sean atendidas rápidamente y con la mayor eficacia.'
     },
     {
-      "title": "Medios de Pago",
-      "description": "Aceptamos pagos en efectivo, transferencia bancaria y tarjetas de crédito."
-    },
-    {
-      "title": "Plataforma Segura",
-      "description": "Nuestra plataforma es segura y confiable, tus datos están protegidos."
+      "title": "Conductores y Personal Altamente Capacitados",
+      "description": 'En "AhoraiteYA", no solo equipamos a nuestros conductores con las mejores herramientas tecnológicas, sino que también invertimos significativamente en su formación. Todos nuestros conductores y personal de soporte reciben entrenamiento exhaustivo sobre las últimas tecnologías y mejores prácticas en logística, garantizando un servicio de máxima calidad y fiabilidad.'
     },
   ]
 
@@ -101,7 +97,7 @@ export default function AboutUs () {
             w-11/12
             mx-auto
             grid
-            grid-cols-1 sm:grid-cols-2
+            grid-cols-1 xl:grid-cols-3
             gap-4
           `}
         >
