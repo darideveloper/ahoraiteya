@@ -35,7 +35,7 @@ export default function InfoCard({title, description}) {
               flex
               items-center
               justify-center
-              group-hover:bg-white
+              bg-white
               m-2
             `}
           >
