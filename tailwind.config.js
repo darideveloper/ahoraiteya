@@ -24,6 +24,7 @@ module.exports = {
       "grey": '#e6e6e6',
       "grey-light": '#f5f5f5',
       "transparent": "transparent",
+      "black": "#000",
     },
     screens: {
       'xs': "320px",

@@ -43,3 +43,26 @@ export const socialItems = [
     "text": email,
   },
 ]
+
+export const headerMenuItems = [
+  {
+    "link": "#benefits",
+    "text": "Beneficios",
+    "target": "_self"
+  },
+  {
+    "link": "#experience",
+    "text": "Nuestra Experiencia",
+    "target": "_self"
+  },
+  {
+    "link": "https://ahoraiteya.com/business/",
+    "text": "Portal de clientes",
+    "target": "_blank"
+  },
+  {
+    "link": "https://ahoraiteya.com/portal/",
+    "text": "Portal de empreas",
+    "target": "_blank"
+  }
+]

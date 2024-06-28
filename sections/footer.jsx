@@ -1,5 +1,6 @@
-import { footerMenuItems, socialItems } from '@/libs/menus'
 import MenuList from '@/components/menu-list'
+import Logo from '@/components/logo'
+import { footerMenuItems, socialItems } from '@/libs/menus'
 
 export default function Footer() {
 
@@ -30,13 +31,9 @@ export default function Footer() {
             left
           `}
         >
-          <img
-            src="/images/logo.png"
-            alt="AhoraiteYa Logo"
+          <Logo 
             className={`
-              w-40
               mx-auto
-              my-6              
             `}
           />
 
