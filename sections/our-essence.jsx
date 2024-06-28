@@ -62,10 +62,11 @@ export default function OurEssence() {
 
     <section 
       className={`
-        our-app
+        our-essence
         container
         mx-auto
       `}
+      id="our-essence"
     >
       <Title 
         title="Nuestra Esencia"

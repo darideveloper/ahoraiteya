@@ -22,7 +22,7 @@ export default function WhyChooseUs() {
   return (
     <section 
       className={`
-        about
+        why-choose-us
         container
         mx-auto
         flex
@@ -30,6 +30,7 @@ export default function WhyChooseUs() {
         items-center lg:items-center
         justify-center
       `}
+      id="why-choose-us"
     >
 
       <div 

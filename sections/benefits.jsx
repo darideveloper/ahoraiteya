@@ -34,11 +34,12 @@ export default function Benefits() {
   return (
     <section 
       className={`
-        services
+        benefits
         container
         mx-auto
         text-center md:text-left
       `}
+      id="benefits"
     >
 
       <div 

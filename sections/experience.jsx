@@ -25,7 +25,9 @@ export default function Experience () {
         experience
         container
         mx-auto
-      `}>
+      `}
+      id="experience"
+    >
 
       <Title 
         title="Nuestra experiencia"
