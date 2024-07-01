@@ -61,6 +61,7 @@ export default function JoinUs() {
               list={item.list}
               cta={item.cta}
               pathD={item.pathD}
+              delay={index * 300}
             />
 
           ))

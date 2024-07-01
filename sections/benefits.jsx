@@ -65,6 +65,7 @@ export default function Benefits() {
             md:mt-12
             w-full md:w-1/2 lg:w-2/3
           `}
+          data-aos="fade-down"
         >
           Comprometidos con la calidad y la eficiencia, ofrecemos una amplia gama de 
           servicios de mensajería y paquetería para satisfacer tus necesidades.

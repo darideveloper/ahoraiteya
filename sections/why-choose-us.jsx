@@ -109,6 +109,7 @@ export default function WhyChooseUs() {
                 key={index}
                 title={item.title}
                 description={item.description}
+                delay={index * 300}
               />
             ))
           }

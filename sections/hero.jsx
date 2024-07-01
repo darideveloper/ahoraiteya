@@ -140,7 +140,7 @@ export default function Hero() {
                     amount={counter.amount}
                     description={counter.description}
                     unit={counter.unit}
-                    delay={index * 300 + 1800}
+                    delay={index * 300}
                   />
                 )
               })

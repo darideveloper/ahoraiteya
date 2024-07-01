@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { fontTitle } from '@/libs/fonts'
 
-export default function InfoCard({title, description}) {
+export default function InfoCard({title, description, delay = 0}) {
   return (
     <div 
         className={`
@@ -15,6 +15,8 @@ export default function InfoCard({title, description}) {
           hover:bg-orange
           hover:text-white
         `}
+        data-aos="zoom-in-left"
+        data-aos-delay={delay}
       >
 
         <div
@@ -71,5 +73,6 @@ export default function InfoCard({title, description}) {
 
 InfoCard.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
+  delay: PropTypes.number
 }

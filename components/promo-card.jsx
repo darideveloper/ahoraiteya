@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Cta from "@/components/cta"
 import { fontTitle } from "@/libs/fonts"
 
-export default function PromoCard({title, text, list, cta, pathD}) {
+export default function PromoCard({title, text, list, cta, pathD, delay}) {
   return (
     <article
       className={`
@@ -24,6 +24,8 @@ export default function PromoCard({title, text, list, cta, pathD}) {
         hover:bg-purple
         hover:text-white
       `}
+      data-aos="fade-down"
+      data-aos-delay={delay}
     >
       <div 
         className={`
@@ -147,6 +149,7 @@ export default function PromoCard({title, text, list, cta, pathD}) {
             group-hover:scale-110
             md:group-hover:translate-x-6
           `}
+          delay={600}
         >
           {cta}
         </Cta>
@@ -156,9 +159,10 @@ export default function PromoCard({title, text, list, cta, pathD}) {
 }
 
 PromoCard.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
-  list: PropTypes.array,
-  cta: PropTypes.string,
-  pathD: PropTypes.string
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  list: PropTypes.array.isRequired,
+  cta: PropTypes.string.isRequired,
+  pathD: PropTypes.string.isRequired,
+  delay: PropTypes.number
 }

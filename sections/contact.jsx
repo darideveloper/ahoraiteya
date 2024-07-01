@@ -146,6 +146,7 @@ export default function Contact() {
                   name={input.name}
                   value={input.value}
                   setValue={input.setValue}
+                  delay={index * 300}
                 />
               ))
             }
@@ -170,6 +171,7 @@ export default function Contact() {
                 my-4
                 mx-auto sm:mx-0
                 block
+                pointer
               `}
             />
           </>

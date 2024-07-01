@@ -105,6 +105,7 @@ export default function OurEssence() {
             w-full md:w-1/2
             max-w-sm
           `}
+          data-aos="zoom-in-right"
         >
           {
             essenceData.map((essence, index) => (
@@ -132,6 +133,8 @@ export default function OurEssence() {
             my-10
             relative
           `}
+          data-aos="zoom-out"
+          data-aos-delay="300"
         >
 
           {

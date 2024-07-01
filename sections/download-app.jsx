@@ -23,6 +23,7 @@ export default function DownloadApp() {
           items-center
           justify-between
         `}
+        data-aos="zoom-out-up"
       >
 
         <div 

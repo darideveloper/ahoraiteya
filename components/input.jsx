@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 
-export default function Input({label, name, type, required = true, value, setValue}) {
+export default function Input({label, name, type, required = true, value, setValue, delay}) {
 
   const [isFocused, setIsFocused] = useState(false)
 
@@ -16,6 +16,8 @@ export default function Input({label, name, type, required = true, value, setVal
         w-full
         ${type == "hidden" && 'hidden'}
       `}
+      data-aos="fade-left"
+      data-aos-delay={delay}
     > 
       <label 
         htmlFor={`input_${name}`}
@@ -66,4 +68,5 @@ Input.propTypes = {
   required: PropTypes.bool,
   value: PropTypes.string,
   setValue: PropTypes.func,
+  delay: PropTypes.number
 }
