@@ -34,6 +34,12 @@ export default function Contact() {
           icon: 'success',
           confirmButtonText: 'Ok'
         })
+        // Redirect to home after click in "ok"
+        .then (() => {
+          // Get url without thanks poram
+          const initialUrl = currentPage.split('?')[0]
+          window.location.href = initialUrl
+        })
       }
     }
   }, [router])
