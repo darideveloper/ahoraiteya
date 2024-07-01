@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 
-export default function Input({label, type, required = true}) {
+export default function Input({label, name, type, required = true, value, setValue}) {
 
   const [isFocused, setIsFocused] = useState(false)
-  const [value, setValue] = useState('')
 
   return (
     <div 
@@ -15,10 +14,11 @@ export default function Input({label, type, required = true}) {
         inline-block
         relative
         w-full
+        ${type == "hidden" && 'hidden'}
       `}
     > 
       <label 
-        htmlFor={label}
+        htmlFor={`input_${name}`}
         className={`
           absolute
           top-1/2
@@ -34,8 +34,8 @@ export default function Input({label, type, required = true}) {
 
       <input 
         type={type}
-        name={label}
-        id={label}
+        name={name}
+        id={`input_${name}`}
         required={required}
         className={`
           bg-grey
@@ -53,13 +53,17 @@ export default function Input({label, type, required = true}) {
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         onChange={(e) => setValue(e.target.value)}
+        value={value}
       />
     </div>
   )
 }
 
 Input.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  required: PropTypes.bool
+  required: PropTypes.bool,
+  value: PropTypes.string,
+  setValue: PropTypes.func,
 }

@@ -19,7 +19,7 @@ export const footerMenuItems = [
   },
 ]
 
-const email = "infp@neosystem.com.py"
+const email = "info@neosystem.com.py"
 
 export const socialItems = [
   {
@@ -56,13 +56,13 @@ export const headerMenuItems = [
     "target": "_self"
   },
   {
-    "link": "https://ahoraiteya.com/business/",
+    "link": "https://ahoraiteya.com/portal/",
     "text": "Portal de clientes",
     "target": "_blank"
   },
   {
-    "link": "https://ahoraiteya.com/portal/",
+    "link": "https://ahoraiteya.com/business/",
     "text": "Portal de empreas",
     "target": "_blank"
-  }
+  },
 ]
