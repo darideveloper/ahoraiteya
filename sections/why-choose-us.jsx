@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
         `}
       >
         <img 
-          src="/images/about.webp"
+          src="/web/images/about.webp"
           alt="Ilustración de una persona entregando un paquete en una moto"
           className={`
           `}

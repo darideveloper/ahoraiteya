@@ -42,7 +42,7 @@ export default function InfoCard({title, description, delay = 0}) {
             `}
           >
             <img 
-              src={`/images/about-us/${title.toLowerCase()}.webp`}
+              src={`/web/images/about-us/${title.toLowerCase()}.webp`}
               className={`
                 px-2
                 w-full

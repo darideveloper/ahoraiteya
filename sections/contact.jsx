@@ -128,7 +128,7 @@ export default function Contact() {
           isSending
           ? 
           <img 
-            src="/images/spinner.gif"
+            src="/web/images/spinner.gif"
             className={`
               w-24
               mx-auto

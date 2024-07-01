@@ -23,7 +23,7 @@ export default function BenefitCard({title, description}) {
     >
 
       <Icon 
-        src={`/images/services/${title.toLowerCase()}.webp`}
+        src={`/web/images/services/${title.toLowerCase()}.webp`}
         alt={`Icono de servicio ${title}`}
         className={`
           mb-4

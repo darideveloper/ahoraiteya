@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 export default function Logo ({className}) {
   return (
     <img
-      src="/images/logo.png"
+      src="/web/images/logo.png"
       alt="AhoraiteYa Logo"
       className={`
         w-40

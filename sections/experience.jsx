@@ -83,7 +83,7 @@ export default function Experience () {
               `}
             >
               <img 
-                src={`/images/experience/${image}.webp`}
+                src={`/web/images/experience/${image}.webp`}
                 alt={`logo de ${image}`}
                 className={`
                   w-full

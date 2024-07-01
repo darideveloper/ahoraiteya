@@ -154,7 +154,7 @@ export default function Hero() {
 
 
       <img 
-        src="/images/hero.webp"
+        src="/web/images/hero.webp"
         alt="Ilustración de repartidos de paquetes en moto"
         className={`
           hero-img
@@ -171,7 +171,7 @@ export default function Hero() {
       />
 
       <img 
-        src="/images/hero.webp"
+        src="/web/images/hero.webp"
         alt="Ilustración de repartidos de paquetes en moto"
         className={`
           hero-img-bg

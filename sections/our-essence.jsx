@@ -143,7 +143,7 @@ export default function OurEssence() {
                 key={index}
                 title={essence.title}
                 details={essence.description}
-                src={`/images/our-essence/${essence.title.toLowerCase().replace(':', "")}.webp`}
+                src={`/web/images/our-essence/${essence.title.toLowerCase().replace(':', "")}.webp`}
                 index={index}
                 currentEssence={currentEssence}
               />
