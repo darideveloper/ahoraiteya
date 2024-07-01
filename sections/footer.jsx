@@ -33,7 +33,7 @@ export default function Footer() {
         >
           <Logo 
             className={`
-              mx-auto
+              mx-auto md:mx-0
             `}
           />
 

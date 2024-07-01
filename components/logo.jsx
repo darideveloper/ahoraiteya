@@ -7,7 +7,8 @@ export default function Logo ({className}) {
       alt="AhoraiteYa Logo"
       className={`
         w-40
-        my-6              
+        my-6
+        ${className}
       `}
     />
   )
