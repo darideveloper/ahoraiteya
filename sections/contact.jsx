@@ -1,55 +1,69 @@
 import Title from '@/components/title'
 import Input from '@/components/input'
-import { fromCredentials, formHost } from '@/libs/form'
+import { formHost, formTexts } from '@/libs/form'
+import { useState } from 'react'
 import Swal from 'sweetalert2'
-import { use, useEffect, useState } from 'react'
-import { useRouter } from 'next/router';
+import axios from 'axios'
 
 
 export default function Contact() {
-
-  // Pages states
-  const router = useRouter()
-  const [currentPage, setCurrentPage] = useState('')
   
   // Input states
   const [inputEmail, setInputEmail] = useState('')
-  const [inputPhone, setInputPhone] = useState('')
+  const [inputName, setInputName] = useState('')
   const [inputMessage, setInputMessage] = useState('')
-  const [inputUser, setInputUser] = useState(fromCredentials.user)
-  const [inputApiKey, setInputApiKey] = useState(fromCredentials.apiKey)
-  const [inputRedirect, setInputRedirect] = useState("")
 
   // Form state
   const [isSending, setIsSending] = useState(false)
 
-  // Show alert in thanks page
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setCurrentPage(window.location.href)
-      if (currentPage.includes('thanks=true')) {
-        Swal.fire({
-          title: 'Gracias por contactarnos',
-          text: 'En breve nos pondremos en contacto contigo',
-          icon: 'success',
-          confirmButtonText: 'Ok'
-        })
-        // Redirect to home after click in "ok"
-        .then (() => {
-          // Get url without thanks poram
-          const initialUrl = currentPage.split('?')[0]
-          window.location.href = initialUrl
-        })
-      }
-    }
-  }, [router])
+  // Submit form webhook
+  function onSubmit(e) {
+    // Send form data as json post request
+    e.preventDefault()
+    setIsSending(true)
 
-  // Update redirect page
-  useEffect(() => {
-    setInputRedirect(`${currentPage}?thanks=true`)
-  }, [currentPage])
+    axios.post(formHost, {
+      name: inputName,
+      email: inputEmail,
+      message: inputMessage
+    })
+    // Show alerts based on response status
+    .then(() => {
+
+      // Show success alert
+      Swal.fire({
+        title: formTexts.success.title,
+        text: formTexts.success.text,
+        icon: 'success',
+        confirmButtonText: 'Entendido'
+      })
+
+      // Clear inputs
+      setInputEmail('')
+      setInputName('')
+      setInputMessage('')
+    })
+    .catch((err) => {
+
+      // Show error alert
+      Swal.fire({
+        title: formTexts.error.title,
+        text: formTexts.error.text,
+        icon: 'error',
+        confirmButtonText: 'Entendido'
+      })
+    })
+    setIsSending(false)
+  }
 
   const inputs = [
+    {
+      "label": "Nombre",
+      "type": "text",
+      "name": "name",
+      "value": inputName,
+      "setValue": setInputName,
+    },
     {
       "label": "Correo electrónico",
       "type": "email",
@@ -58,39 +72,11 @@ export default function Contact() {
       "setValue": setInputEmail
     },
     {
-      "label": "Teléfono",
-      "type": "tel",
-      "name": "telefono",
-      "value": inputPhone,
-      "setValue": setInputPhone,
-    },
-    {
       "label": "Mensaje",
       "type": "text",
       "name": "mensaje",
       "value": inputMessage,
       "setValue": setInputMessage,
-    },
-    {
-      "label": "",
-      "type": "hidden",
-      "name": "user",
-      "value": inputUser,
-      "setValue": setInputUser,
-    },
-    {
-      "label": "",
-      "type": "hidden",
-      "name": "api_key",
-      "value": inputApiKey,
-      "setValue": setInputApiKey,
-    },
-    {
-      "label": "",
-      "type": "hidden",
-      "name": "redirect",
-      "value": inputRedirect,
-      "setValue": setInputRedirect,
     },
   ]
 
@@ -117,11 +103,7 @@ export default function Contact() {
       <form 
         action={formHost}
         method='POST'
-        onSubmit={(e) => {
-          e.preventDefault()
-          setIsSending(true)
-          e.target.submit()
-        }}
+        onSubmit={(e) => onSubmit(e)}
       >
 
         {

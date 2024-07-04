@@ -10,7 +10,6 @@ export default function Input({label, name, type, required = true, value, setVal
       className={`
         input-wrapper
         duration-300
-        hover:-translate-y-2
         inline-block
         relative
         w-full
@@ -46,7 +45,7 @@ export default function Input({label, name, type, required = true, value, setVal
           pt-5
           pb-2
           duration-300
-          focus:outline-none
+          outline-none
           focus:bg-orange-light
           text-lg
           w-full
