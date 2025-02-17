@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import MenuList from '@/components/menu-list'
 import Logo from '@/components/logo'
 import { footerMenuItems, socialItems } from '@/libs/menus'
@@ -11,6 +12,7 @@ export default function Footer() {
         w-full
         py-6
         mt-12
+        text-white
       `}
     >
       <div
@@ -18,7 +20,6 @@ export default function Footer() {
           content
           container
           mx-auto
-          text-white
           flex
           flex-col md:flex-row
           justify-center lg:justify-evenly
@@ -31,7 +32,7 @@ export default function Footer() {
             left
           `}
         >
-          <Logo 
+          <Logo
             className={`
               mx-auto md:mx-0
             `}
@@ -62,20 +63,38 @@ export default function Footer() {
         `}
         >
 
-        <MenuList 
-          title="Enlaces"
-          menuItems={footerMenuItems}
-          target="_self"
-        />
+          <MenuList
+            title="Enlaces"
+            menuItems={footerMenuItems}
+            target="_self"
+          />
 
-        <MenuList 
-          title="Redes Sociales"
-          menuItems={socialItems}
-          target="_blank"
-        />
-          
+          <MenuList
+            title="Redes Sociales"
+            menuItems={socialItems}
+            target="_blank"
+          />
+
         </div>
       </div>
+
+      <p
+        className={`
+          w-11/12
+          mx-auto
+          text-center
+          mt-6
+        `}
+      >
+        © 2021 Ahoraiteya. Todos los derechos reservados. Powered by&nbsp;
+        <Link
+          href="https://api.whatsapp.com/send?phone=5214493402622"
+          target="_blank"
+        >
+          Dari Developer
+        </Link>
+      </p>
+
     </footer>
   )
 }
